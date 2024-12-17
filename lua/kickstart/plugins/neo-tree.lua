@@ -11,7 +11,7 @@ return {
   },
   cmd = 'Neotree',
   keys = {
-    { '\\', ':Neotree reveal<CR>', desc = 'NeoTree reveal', silent = true },
+    { '<Leader>fr', ':Neotree reveal<CR>', desc = 'NeoTree reveal', silent = true },
   },
   opts = {
     filesystem = {
@@ -20,6 +20,13 @@ return {
           ['\\'] = 'close_window',
         },
       },
+      hijack_netrw_behavior = 'open_default',
     },
+    buffers = {
+      follow_current_file = {
+        enabled = true, -- This will find and focus the file in the active buffer every time -- -- the current file is changed while the tree is open.
+      },
+    },
+    enable_git_status = true,
   },
 }
