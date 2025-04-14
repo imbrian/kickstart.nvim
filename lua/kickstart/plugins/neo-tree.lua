@@ -20,7 +20,9 @@ return {
           ['\\'] = 'close_window',
         },
       },
-      hijack_netrw_behavior = 'open_default',
+      follow_current_file = {
+        enabled = true,
+      },
     },
     buffers = {
       follow_current_file = {
